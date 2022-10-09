@@ -5,10 +5,10 @@ public class CustomerManager {
         _customer = customer;
 }
     public void save(){
-        System.out.println("Müşteri kaydedildi: "+ _customer.FirstName);
+        System.out.println("Müşteri kaydedildi: ");
     }
 
     public void delete(){
-        System.out.println("Müşteri silindi: "+ _customer.FirstName);
+        System.out.println("Müşteri silindi: ");
     }
 }
