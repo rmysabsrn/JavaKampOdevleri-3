@@ -7,6 +7,18 @@ public class Course {
     String courseExp;
     double price;
 
+    public Course(){
+
+    }
+
+    public Course(int id ,String courseExp, String courseName, String instructor, double price) {
+        this.courseExp = courseExp;
+        this.courseName = courseName;
+        this.id = id;
+        this.price = price;
+        this.instructor = instructor;
+    }
+
     public int getId() {
         return id;
     }
