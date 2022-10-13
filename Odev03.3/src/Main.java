@@ -1,3 +1,4 @@
+import business.CategoryManager;
 import business.CourseManager;
 import core.logging.Logger;
 import dataAccess.Abstract.ICourseDao;
@@ -14,5 +15,7 @@ public class Main {
         courseManager.add(course);
 
         System.out.println(course.getCourseName()+"/"+course.getCourseExp());
+
+
     }
 }
