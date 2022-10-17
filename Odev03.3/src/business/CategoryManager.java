@@ -2,6 +2,7 @@ package business;
 
 import core.logging.Logger;
 import dataAccess.Abstract.ICategoryDao;
+import dataAccess.Concrete.Jdbc.JdbcCategoryDao;
 import entities.Category;
 
 public class CategoryManager {
@@ -17,6 +18,9 @@ public class CategoryManager {
         this.logger = logger;
     }
 
+    public CategoryManager(ICategoryDao jdbcCategoryDao, Logger[] loggers) {
+    }
+
     public void add(Category category)throws Exception{
        for(Category ctgry : categories) {
            if(ctgry.getCategoryName() == category.getCategoryName() && ctgry !=category){
@@ -26,8 +30,14 @@ public class CategoryManager {
            }
            System.out.println("Kategori eklendi");
        }
+        categoryDao.add(category);
+        for (Logger logger : logger) {
+            logger.log(category.getCategoryName());
+        }
 
         }
+
+
             }
 
 
